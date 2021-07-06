@@ -2,11 +2,11 @@
 Bluetooth 'eddystone' beacon for RPi
 
  A python3 script to setup a bluetooth "Eddystone" beacon to broadcast your RPi's IP
-  address as a URI of the form http://{host-ip-address}
-  Can then use a bluetooth beacon app on a smart-phone to find and browse to the RPi
+  address as a URI of the form http://{host-ip-address}.
+  Can then use a bluetooth beacon app on a smart-phone to find and browse to the RPi.
   If not running a web server on the RPi then the ip address will still be of use.
 
-  *** This code must be run with root priviledges ***
+  *** Note this code must be run with root priviledges ***
 
   To find the host machine's ip address parse the output of `ip route` and look
   for dev {interface-name} * scope link * src {ip-addr} on a single line so as to
