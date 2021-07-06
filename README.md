@@ -16,30 +16,40 @@ Bluetooth 'eddystone' beacon for RPi
   If no active interfaces are found BTBeacon uses the machine's hostname.
   If more than one active interface is found:
   
-    choose the alphabetical first eth* interface
+   choose the alphabetical first eth* interface
   
-    but if no eth* interfaces are listed just choose the alphabetical first
+   but if no eth* interfaces are listed just choose the alphabetical first
 
 
  Requires:
+ 
   hostname, hciconfig and hcitool cli utilities @ /usr/bin/
+ 
   ip cli utility @ /usr/sbin/
+
   root status
 
 
  Based on:
+
   https://hackaday.io/project/10314-raspberry-pi-3-as-an-eddystone-url-beacon
 
 
  Usage:
+ 
   sudo ./BTBeacon.py
+
   or use sudo crontab -e to set as a root cron job @reboot and/or every hour.
 
 
  To do:
+ 
   Allow command line spec'n of the URI & protocol
+  
   Allow cmd line spec'n of the interface who's ip to use
+  
   Parse CMD3's error message
+  
   Parse apache config file for an IP binding
 
 
