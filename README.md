@@ -8,9 +8,11 @@ Bluetooth 'eddystone' beacon for RPi
 
   *** Note this code must be run with root priviledges ***
 
-  To find the host machine's ip address this code parses the output of `ip route` and looks
-  for dev {interface-name} * scope link * src {ip-addr} on a single line so as to
-  build an {interface:ip-addr} dict eg {'eth0':'192.168.0.3', 'wlan0':'192.168.0.45'}
+  To find the host machine's ip address this code parses the output of `ip route` and looks for
+  
+  dev {interface-name} * scope link * src {ip-addr}
+
+  on a single line so as to build an {interface:ip-addr} dictionary eg {'eth0':'192.168.0.3', 'wlan0':'192.168.0.45'}
   If no active interfaces are found BTBeacon uses the machine's hostname
   If more than one active interface is found:
     choose the alphabetical first eth* interface
