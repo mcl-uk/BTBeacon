@@ -10,7 +10,7 @@ If not running a web server on the RPi then it's ip address may still be of use.
 
 To find the host machine's ip address this code parses the output of `ip route` and looks for
   
-	dev {interface-name} * scope link * src {ip-addr}
+	* dev {interface-name} * scope link * src {ip-addr} *
 
 on a single line so as to build an {interface: ip-addr} dictionary eg {'eth0': '192.168.0.3', 'wlan0': '192.168.0.45'}.
 If no active interfaces are found BTBeacon uses the machine's hostname.
