@@ -110,7 +110,7 @@ if host is None:
       dev = parts[parts.index('dev') + 1]  
       ip  = parts[parts.index('src') + 1]  
     except: continue
-    myIPs[dev] = ip
+    if re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$", ip): myIPs[dev] = ip
 
   # if we currently have no active IP addrs assigned use hostname instead
   if len(myIPs) == 0:
