@@ -28,7 +28,7 @@ Bluetooth 'eddystone' beacon for RPi
 
 
  Based on:
-  https://hackaday.io/project/10314-raspberry-pi-3-as-an-eddystone-url-beacon...
+  https://hackaday.io/project/10314-raspberry-pi-3-as-an-eddystone-url-beacon
 
 
  Usage:
