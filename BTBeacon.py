@@ -116,10 +116,10 @@ if host is None:
   if len(myIPs) == 0:
     host = shellOut('hostname').stdout
   else:
+    host = myIPs[ifaces[0]] # default pick the first entry
     if len(myIPs) > 1:
       # must pick one of many
       ifaces = sorted(myIPs.keys())
-      host = myIPs[ifaces[0]] # default pick the first entry
       # but choose instead an "eth" entry if there is one
       for iface in ifaces:
         if 'eth' in iface:
