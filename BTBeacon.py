@@ -20,8 +20,7 @@
 #
 #
 # Requires:
-#  hostname, hciconfig and hcitool cli utilities @ /usr/bin/
-#  ip cli utility @ /usr/sbin/
+#  ip, hostname, hciconfig & hcitool cli utilities on root's path
 #  root status
 #
 #
@@ -76,10 +75,10 @@ host = None
 
 import subprocess, re
 
-CMD1 = "/usr/bin/ip route"
-CMD2 = "/usr/bin/hciconfig hci0 up" # expect returncode == 0
-CMD3 = "/usr/bin/hciconfig hci0 leadv 3" # returncode is no use
-CMD4A = "/usr/bin/hcitool -i hci0 cmd 0x08 0x0008" # L1
+CMD1 = "ip route"
+CMD2 = "hciconfig hci0 up" # expect returncode == 0
+CMD3 = "hciconfig hci0 leadv 3" # returncode is no use
+CMD4A = "hcitool -i hci0 cmd 0x08 0x0008" # L1
 CMD4B = "02 01 06 03 03 aa fe" # L2
 CMD4C = "16 aa fe 10 00" # ss cc cc cc cc...
 
