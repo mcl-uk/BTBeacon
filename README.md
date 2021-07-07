@@ -22,8 +22,7 @@ If more than one active interface is found:
 
 Requires:
  
-	hostname, hciconfig and hcitool cli utilities @ /usr/bin/
-	ip cli utility @ /usr/sbin/
+	ip, hostname, hciconfig & hcitool cli utilities on root's path
 	root status
 
 Based on:
